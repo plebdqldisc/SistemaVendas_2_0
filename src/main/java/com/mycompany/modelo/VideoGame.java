@@ -8,6 +8,24 @@ package com.mycompany.modelo;
  *
  * @author arthur.7923
  */
-public class VideoGame {
-    
+public class VideoGame extends Produto{
+    private String plataforma;
+
+    public VideoGame() {
+    }
+
+    public String getPlataforma() {
+        return plataforma;
+    }
+
+    public void setPlataforma(String plataforma) {
+        this.plataforma = plataforma;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + super.getNome() +
+                " | Preço: " + super.getPreco() +
+                " | Plataforma: " + this.plataforma;
+    }
 }
