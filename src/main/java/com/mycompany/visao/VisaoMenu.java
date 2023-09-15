@@ -75,4 +75,17 @@ public class VisaoMenu {
         return object; 
     }
     
+     public static int menuRemocaoProduto(){
+        System.out.println("===============REMOVER PRODUTO=================");
+        System.out.println("Qual produto deseja remover?");
+        
+        for(int i = 0; i< ControleSistema.produtos.size(); i++) {
+            System.out.println(i + 1 + " | " + ControleSistema.produtos.get(i));
+        }
+        
+        System.out.println("===============================================");
+        int produtoRemover = new Scanner(System.in).nextInt();
+        
+        return produtoRemover;
+    }
 }

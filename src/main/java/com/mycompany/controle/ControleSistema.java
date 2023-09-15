@@ -4,11 +4,14 @@
  */
 package com.mycompany.controle;
 
+import com.mycompany.modelo.Computador;
 import com.mycompany.modelo.VideoGame;
+import com.mycompany.outros.Constantes;
 import com.mycompany.visao.VisaoComputador;
 import com.mycompany.visao.VisaoMenu;
 import com.mycompany.visao.VisaoVideoGame;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -37,7 +40,60 @@ public class ControleSistema {
             
             System.out.println("Alterando o produto: " + videoGame.toString());
             
-            //videoGame = (VideoGame) VisaoVideoGame.
+            videoGame = (VideoGame) VisaoMenu.menuAlteracaoProdutoInformacoes(videoGame);
+            ControleSistema.produtos.set(indiceProduto, videoGame);
+            
+        }else if(object instanceof Computador) {
+            Computador computador = new Computador();
+            computador = (Computador) object;
+            
+            System.out.println("Alterando o produto: " + computador.toString());
+            
+            computador = (Computador) VisaoMenu.menuAlteracaoProdutoInformacoes(computador);
+            ControleSistema.produtos.set(indiceProduto, computador);
+        }
+    }
+    
+    public static void listar(ArrayList<Object> produtos) {
+        for(int i = 0; i< produtos.size(); i++) {
+            Object object = produtos.get(i);
+            
+            if(object instanceof VideoGame) {
+                VideoGame videoGame = (VideoGame) object;
+                System.out.println(videoGame.toString());
+            }else if(object instanceof Computador){
+                Computador computador = (Computador) object;
+                System.out.println(computador.toString());
+            }
+        }
+    }
+    
+    public static void remover(int indiceProduto) {
+        
+        indiceProduto = indiceProduto - 1;
+        
+        Object object = produtos.get(indiceProduto);
+        
+        System.out.println("Deseja realmente remover o produto? (S/N) ");
+        String sn = new Scanner(System.in).next().toLowerCase();
+        
+        if(sn.equals(Constantes.REMOVER_SIM)){
+            if(object instanceof VideoGame){
+                VideoGame videoGame = new VideoGame();
+                videoGame = (VideoGame) object;
+                System.out.println("Deseja realmente remover o produto " + videoGame.getNome() + "? (S/N) ");
+            } if(object instanceof Computador){
+                Computador computador = new Computador();
+                computador = (Computador) object;
+                System.out.println("Deseja realmente remover o produto " + computador.getNome() + "? (S/N) ");
+            }
+            
+            try{
+                produtos.remove(indiceProduto);
+                System.out.println("Removido com sucesso!");
+            }catch(Exception e) {
+                System.out.println("Produto inexistente!");
+            }
         }
     }
 }
