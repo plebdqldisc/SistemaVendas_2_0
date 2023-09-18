@@ -10,7 +10,7 @@ package com.mycompany.modelo;
  */
 public class Produto {
     private Double preco;
-    private String nome;
+    private String marca;
 
     public Produto() {
     }
@@ -23,11 +23,11 @@ public class Produto {
         this.preco = preco;
     }
 
-    public String getNome() {
-        return nome;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 }

@@ -24,7 +24,7 @@ public class VideoGame extends Produto{
 
     @Override
     public String toString() {
-        return "Nome: " + super.getNome() +
+        return "Nome: " + super.getMarca() +
                 " | Preço: " + super.getPreco() +
                 " | Plataforma: " + this.plataforma;
     }

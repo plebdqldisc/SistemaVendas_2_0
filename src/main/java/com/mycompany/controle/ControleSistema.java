@@ -5,10 +5,12 @@
 package com.mycompany.controle;
 
 import com.mycompany.modelo.Computador;
+import com.mycompany.modelo.Televisao;
 import com.mycompany.modelo.VideoGame;
 import com.mycompany.outros.Constantes;
 import com.mycompany.visao.VisaoComputador;
 import com.mycompany.visao.VisaoMenu;
+import com.mycompany.visao.VisaoTelevisao;
 import com.mycompany.visao.VisaoVideoGame;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -27,6 +29,8 @@ public class ControleSistema {
             produtos.add(VisaoVideoGame.menuCadastroVideoGame());
         }else if(opcaoProduto == 2){
             produtos.add(VisaoComputador.menuCadastroComputador());
+        }else if(opcaoProduto == 3) {
+            produtos.add(VisaoTelevisao.menuCadastroTelevisao());
         }
     }
     public static void alterar(int indiceProduto) {
@@ -51,6 +55,14 @@ public class ControleSistema {
             
             computador = (Computador) VisaoMenu.menuAlteracaoProdutoInformacoes(computador);
             ControleSistema.produtos.set(indiceProduto, computador);
+            
+        }else if(object instanceof Televisao) {
+            Televisao televisao = new Televisao();
+            televisao = (Televisao) object;
+            
+            System.out.println("Alterando o produto: " + televisao.toString());
+            televisao = (Televisao) VisaoMenu.menuAlteracaoProdutoInformacoes(televisao);
+            ControleSistema.produtos.set(indiceProduto, televisao);
         }
     }
     
@@ -64,6 +76,9 @@ public class ControleSistema {
             }else if(object instanceof Computador){
                 Computador computador = (Computador) object;
                 System.out.println(computador.toString());
+            }else if(object instanceof Televisao) {
+                Televisao televisao = (Televisao) object;
+                System.out.println(televisao.toString());
             }
         }
     }
@@ -81,11 +96,17 @@ public class ControleSistema {
             if(object instanceof VideoGame){
                 VideoGame videoGame = new VideoGame();
                 videoGame = (VideoGame) object;
-                System.out.println("Deseja realmente remover o produto " + videoGame.getNome() + "? (S/N) ");
+                System.out.println("Deseja realmente remover o produto " + videoGame.getMarca() + "? (S/N) ");
+                
             } if(object instanceof Computador){
                 Computador computador = new Computador();
                 computador = (Computador) object;
-                System.out.println("Deseja realmente remover o produto " + computador.getNome() + "? (S/N) ");
+                System.out.println("Deseja realmente remover o produto " + computador.getMarca() + "? (S/N) ");
+                
+            } if(object instanceof Televisao) {
+                Televisao televisao = new Televisao();
+                televisao = (Televisao) object;
+                System.out.println("Deseja realmente remover o produto " + televisao.getMarca() + "? (S/N) ");
             }
             
             try{

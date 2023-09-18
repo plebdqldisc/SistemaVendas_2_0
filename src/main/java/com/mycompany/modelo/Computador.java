@@ -33,7 +33,7 @@ public class Computador extends Produto{
 
     @Override
     public String toString() {
-        return  "Nome: " + super.getNome() +
+        return  "Nome: " + super.getMarca() +
                 " | Preco: " + super.getPreco() + 
                 " | Memória Ram " + this.memoriaRam +
                 " | Processador: " + this.processador;

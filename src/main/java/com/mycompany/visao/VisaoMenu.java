@@ -6,6 +6,7 @@ package com.mycompany.visao;
 
 import com.mycompany.controle.ControleSistema;
 import com.mycompany.modelo.Computador;
+import com.mycompany.modelo.Televisao;
 import com.mycompany.modelo.VideoGame;
 import java.util.Scanner;
 
@@ -32,6 +33,7 @@ public class VisaoMenu {
         System.out.println("Qual categoria de produto deseja cadadstrar?");
         System.out.println("1 - Video Game");
         System.out.println("2 - Computador");
+        System.out.println("3 - Televisão");
         System.out.println("===============================================");
         int opcaoProduto = new Scanner(System.in).nextInt();
         
@@ -55,21 +57,39 @@ public class VisaoMenu {
     
     public static Object menuAlteracaoProdutoInformacoes(Object object){
         if(object instanceof VideoGame){
-            System.out.println("Novo nome: ");
-            ((VideoGame) object).setNome(new Scanner(System.in).nextLine());
+            
+                        System.out.println("Novo nome: ");
+            ((VideoGame) object).setMarca(new Scanner(System.in).nextLine());
             System.out.println("Novo Preço: ");
             ((VideoGame) object).setPreço(new Scanner(System.in).nextDouble());
             System.out.println("Nova Plataforma: ");
             ((VideoGame) object).setPlataforma(new Scanner(System.in).nextLine());
+            
         }else if (object instanceof Computador){
+            
                         System.out.println("Novo nome: ");
-            ((Computador) object).setNome(new Scanner(System.in).nextLine());
+            ((Computador) object).setMarca(new Scanner(System.in).nextLine());
             System.out.println("Novo Preço: ");
             ((Computador) object).setPreço(new Scanner(System.in).nextDouble());
             System.out.println("Nova quantidade de memória Ram: ");
             ((Computador) object).setMemoriaRam(new Scanner(System.in).nextDouble());
             System.out.println("Novo processador: ");
             ((Computador) object).setProcessador(new Scanner(System.in).nextLine());
+            
+        }else if(object instanceof Televisao){
+            
+                        System.out.println("Novo nome: ");
+            ((Televisao) object).setMarca(new Scanner(System.in).nextLine());
+            
+            System.out.println("Novo Preço: ");
+            ((Televisao) object).setPreço(new Scanner(System.in).nextDouble());
+            
+            System.out.println("Quantas polegadas: ");
+            ((Televisao) object).setPolegadas(new Scanner(System.in).nextDouble());
+        
+            System.out.println("Qual Resolucao: ");
+            ((Televisao) object).setResolucao(new Scanner(System.in).nextDouble());
+            System.out.println("===============================================");
         }
         
         return object; 

@@ -16,7 +16,7 @@ public class VisaoComputador {
         Computador computador = new Computador();
         
         System.out.println("Nome: ");
-        computador.setNome(new Scanner(System.in).nextLine());
+        computador.setMarca(new Scanner(System.in).nextLine());
         System.out.println("Preço: ");
         computador.setPreço(new Scanner(System.in).nextDouble());
         System.out.println("Quantidade de memória Ram: ");

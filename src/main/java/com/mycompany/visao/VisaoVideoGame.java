@@ -16,7 +16,7 @@ public class VisaoVideoGame {
         VideoGame videoGame = new VideoGame();
         
         System.out.println("Nome: ");
-        videoGame.setNome(new Scanner(System.in).nextLine());
+        videoGame.setMarca(new Scanner(System.in).nextLine());
         System.out.println("Preço: ");
         videoGame.setPreço(new Scanner(System.in).nextDouble());
         System.out.println("Plataforma: ");
