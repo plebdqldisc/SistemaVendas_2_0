@@ -8,6 +8,7 @@ import com.mycompany.controle.ControleSistema;
 import com.mycompany.modelo.Computador;
 import com.mycompany.modelo.Televisao;
 import com.mycompany.modelo.VideoGame;
+import com.mycompany.modelo.Produto;
 import java.util.Scanner;
 
 /**
@@ -21,6 +22,7 @@ public class VisaoMenu {
         System.out.println("2 - Alterar produto");
         System.out.println("3 - Remover produto");
         System.out.println("4 - Listar produto");
+        System.out.println("5 - Vender produto");
         System.out.println("===============================================");
         int opcaoMenu = new Scanner(System.in).nextInt();
         
@@ -107,5 +109,29 @@ public class VisaoMenu {
         int produtoRemover = new Scanner(System.in).nextInt();
         
         return produtoRemover;
-    }
+        
+     }
+      public static int menuVenderProduto(){
+            System.out.println("==============VENDER PRODUTO===============");
+            System.out.println("produtos cadastrados");
+            
+            for (int i = 0; i< ControleSistema.produtos.size(); i++) {
+                System.out.println(i + 1 + " | " + ControleSistema.produtos.get(i));
+            }
+            System.out.println("Qual produto deseja vender? ");
+            int produtoVender = new Scanner(System.in).nextInt();
+            
+            System.out.println("===========================================");
+            
+            System.out.println("Quantos desse produto você quer vender? ");
+            int produtoQuantidadeVen = new Scanner(System.in).nextInt();
+            
+            if(produtoQuantidadeVen > 0) {
+                double vendainteira = produtoQuantidadeVen * 
+            //}
+            
+            
+            //return produtoVender;
+
+     //}
 }
