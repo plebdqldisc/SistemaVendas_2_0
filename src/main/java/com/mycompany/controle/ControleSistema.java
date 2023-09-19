@@ -117,7 +117,47 @@ public class ControleSistema {
             }
         }
     }
-    public static void vender() {
+    public static void vender(ArrayList<Object> produtos, int indiceProduto) {
+    
+        indiceProduto = indiceProduto - 1;
+    
+        Object object = produtos.get(indiceProduto);
+        Scanner scanner = new Scanner(System.in);
         
+        if(object instanceof VideoGame){
+            
+            VideoGame videoGame = new VideoGame();
+            videoGame = (VideoGame) object;
+            
+            System.out.println("Quantos desse "+ videoGame.getMarca() +" você desej
+            double produtoQuantidadeVen = new Scanner(System.in).nextDouble()
+            
+            double totalprecoven = produtoQuantidadeVen * videoGame.getPreco();
+            
+            System.out.println("TOTAL DAS VENDAS: R$" + totalprecoven);
+            
+        }else if(object instanceof Computador){
+            
+            Computador computador = new Computador();
+            computador = (Computador) object;
+            
+            System.out.println("Quantos desse "+ computador.getMarca() +" você dese
+            double produtoQuantidadeVen = new Scanner(System.in).nextDouble()
+            
+            double totalprecoven = produtoQuantidadeVen * computador.getPreco();
+            
+            System.out.println("TOTAL DAS VENDAS: R$" + totalprecoven);
+            
+        }else if(object instanceof Televisao) {
+            
+            Televisao televisao = new Televisao();
+            televisao = (Televisao) object;
+            
+            System.out.println("Quantos desse "+ televisao.getMarca() +" você desej
+            double produtoQuantidadeVen = new Scanner(System.in).nextDouble()
+            
+            double totalprecoven = produtoQuantidadeVen * televisao.getPreco();
+            
+            System.out.println("TOTAL DAS VENDAS: R$" + totalprecoven);
     }
 }
