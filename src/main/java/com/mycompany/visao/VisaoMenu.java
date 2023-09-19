@@ -113,25 +113,18 @@ public class VisaoMenu {
      }
       public static int menuVenderProduto(){
             System.out.println("==============VENDER PRODUTO===============");
-            System.out.println("produtos cadastrados");
             
-            for (int i = 0; i< ControleSistema.produtos.size(); i++) {
-                System.out.println(i + 1 + " | " + ControleSistema.produtos.get(i));
+            System.out.println("Produtos Cadastrados:");
+            for(int i = 0; i< ControleSistema.produtos.size(); i++) {
+            
+            System.out.println(i + 1 + " | " + ControleSistema.produtos.get(i));
             }
-            System.out.println("Qual produto deseja vender? ");
-            int produtoVender = new Scanner(System.in).nextInt();
+            
+            System.out.println("Qual produto deseja vender? (Digite o número)");
             
             System.out.println("===========================================");
+            int produtoVender = new Scanner(System.in).nextInt();
             
-            System.out.println("Quantos desse produto você quer vender? ");
-            int produtoQuantidadeVen = new Scanner(System.in).nextInt();
-            
-            if(produtoQuantidadeVen > 0) {
-                double vendainteira = produtoQuantidadeVen * 
-            //}
-            
-            
-            //return produtoVender;
-
-     //}
+            return produtoVender;
+    }
 }
