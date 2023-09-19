@@ -32,7 +32,7 @@ public class SistemaVendas_2_0 {
                 ControleSistema.listar(ControleSistema.produtos);
                 
             }else if(opcaoMenu == Constantes.VENDER) {
-                //ControleSistema.vender(VisaoMenu.menuVenderProduto());
+                ControleSistema.vender(ControleSistema.produtos, VisaoMenu.menuVenderProduto());
             }
         }
     }
