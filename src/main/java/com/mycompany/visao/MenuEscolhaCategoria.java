@@ -100,6 +100,19 @@ public class MenuEscolhaCategoria extends javax.swing.JFrame {
                  break;
              case 1:
                  
+                 CadastroVideoGame cadastroVideoGame = new CadastroVideoGame();
+                 cadastroVideoGame.setTitle("Cadastro VideoGame");
+                 cadastroVideoGame.setLocationRelativeTo(null);
+                 cadastroVideoGame.setVisible(true);
+                 break;
+             case 2:
+                 
+                 CadastroTelevisao cadastroTelevisao = new CadastroTelevisao();
+                 cadastroTelevisao.setTitle("Cadastro Televisao");
+                 cadastroTelevisao.setLocationRelativeTo(null);
+                 cadastroTelevisao.setVisible(true);
+                 break;
+                 
                  
          }
     }//GEN-LAST:event_btnOkActionPerformed
