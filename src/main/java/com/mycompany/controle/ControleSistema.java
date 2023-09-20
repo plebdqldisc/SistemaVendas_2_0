@@ -117,12 +117,8 @@ public class ControleSistema {
             }
         }
     }
-<<<<<<< HEAD
-     public static void vender(ArrayList<Object> produtos, int indiceProduto) {
-=======
-    public static void vender(ArrayList<Object> produtos, int indiceProduto) {
->>>>>>> 9f4cf988506d96871f4bf554ecc3e51b70599441
     
+    public static void vender(ArrayList<Object> produtos, int indiceProduto) {
         indiceProduto = indiceProduto - 1;
     
         Object object = produtos.get(indiceProduto);
@@ -133,13 +129,8 @@ public class ControleSistema {
             VideoGame videoGame = new VideoGame();
             videoGame = (VideoGame) object;
             
-<<<<<<< HEAD
-            System.out.println("Quantos desse "+ videoGame.getMarca() +" você deseja vender");
+
             double produtoQuantidadeVen = new Scanner(System.in).nextDouble();
-=======
-            System.out.println("Quantos desse "+ videoGame.getMarca() +" você desej
-            double produtoQuantidadeVen = new Scanner(System.in).nextDouble()
->>>>>>> 9f4cf988506d96871f4bf554ecc3e51b70599441
             
             double totalprecoven = produtoQuantidadeVen * videoGame.getPreco();
             
@@ -150,13 +141,7 @@ public class ControleSistema {
             Computador computador = new Computador();
             computador = (Computador) object;
             
-<<<<<<< HEAD
-            System.out.println("Quantos desse "+ computador.getMarca() +" você deseja vender");
             double produtoQuantidadeVen = new Scanner(System.in).nextDouble();
-=======
-            System.out.println("Quantos desse "+ computador.getMarca() +" você dese
-            double produtoQuantidadeVen = new Scanner(System.in).nextDouble()
->>>>>>> 9f4cf988506d96871f4bf554ecc3e51b70599441
             
             double totalprecoven = produtoQuantidadeVen * computador.getPreco();
             
@@ -167,20 +152,12 @@ public class ControleSistema {
             Televisao televisao = new Televisao();
             televisao = (Televisao) object;
             
-<<<<<<< HEAD
             System.out.println("Quantos desse "+ televisao.getMarca() +" você deseja vender");
             double produtoQuantidadeVen = new Scanner(System.in).nextDouble();
-=======
-            System.out.println("Quantos desse "+ televisao.getMarca() +" você desej
-            double produtoQuantidadeVen = new Scanner(System.in).nextDouble()
->>>>>>> 9f4cf988506d96871f4bf554ecc3e51b70599441
             
             double totalprecoven = produtoQuantidadeVen * televisao.getPreco();
             
             System.out.println("TOTAL DAS VENDAS: R$" + totalprecoven);
-<<<<<<< HEAD
         }    
-=======
->>>>>>> 9f4cf988506d96871f4bf554ecc3e51b70599441
     }
 }   
