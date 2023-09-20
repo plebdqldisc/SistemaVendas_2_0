@@ -10,7 +10,7 @@ package com.mycompany.modelo;
  */
 public class Produto {
     private Double preco;
-    private String marca;
+    private String nome;
 
     public Produto() {
     }
@@ -19,15 +19,15 @@ public class Produto {
         return preco;
     }
 
-    public void setPreço(Double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
-    public String getMarca() {
-        return marca;
+    public String getNome() {
+        return nome;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

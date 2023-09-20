@@ -34,7 +34,7 @@ public class Televisao extends Produto {
     
     @Override
     public String toString() {
-        return "Nome: " + super.getMarca() +
+        return "Nome: " + super.getNome() +
                 " | Preco: " + super.getPreco() +
                 " | Polegadas " + this.polegadas +
                 " | Resolução " + this.resolucao;

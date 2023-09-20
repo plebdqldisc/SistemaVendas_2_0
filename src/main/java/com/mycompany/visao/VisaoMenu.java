@@ -61,18 +61,18 @@ public class VisaoMenu {
         if(object instanceof VideoGame){
             
                         System.out.println("Novo nome: ");
-            ((VideoGame) object).setMarca(new Scanner(System.in).nextLine());
+            ((VideoGame) object).setNome(new Scanner(System.in).nextLine());
             System.out.println("Novo Preço: ");
-            ((VideoGame) object).setPreço(new Scanner(System.in).nextDouble());
+            ((VideoGame) object).setPreco(new Scanner(System.in).nextDouble());
             System.out.println("Nova Plataforma: ");
             ((VideoGame) object).setPlataforma(new Scanner(System.in).nextLine());
             
         }else if (object instanceof Computador){
             
                         System.out.println("Novo nome: ");
-            ((Computador) object).setMarca(new Scanner(System.in).nextLine());
+            ((Computador) object).setNome(new Scanner(System.in).nextLine());
             System.out.println("Novo Preço: ");
-            ((Computador) object).setPreço(new Scanner(System.in).nextDouble());
+            ((Computador) object).setPreco(new Scanner(System.in).nextDouble());
             System.out.println("Nova quantidade de memória Ram: ");
             ((Computador) object).setMemoriaRam(new Scanner(System.in).nextDouble());
             System.out.println("Novo processador: ");
@@ -81,10 +81,10 @@ public class VisaoMenu {
         }else if(object instanceof Televisao){
             
                         System.out.println("Novo nome: ");
-            ((Televisao) object).setMarca(new Scanner(System.in).nextLine());
+            ((Televisao) object).setNome(new Scanner(System.in).nextLine());
             
             System.out.println("Novo Preço: ");
-            ((Televisao) object).setPreço(new Scanner(System.in).nextDouble());
+            ((Televisao) object).setPreco(new Scanner(System.in).nextDouble());
             
             System.out.println("Quantas polegadas: ");
             ((Televisao) object).setPolegadas(new Scanner(System.in).nextDouble());

@@ -16,10 +16,10 @@ public class VisaoTelevisao {
         Televisao televisao = new Televisao();
         
         System.out.println("Marca: ");
-        televisao.setMarca(new Scanner(System.in).nextLine());
+        televisao.setNome(new Scanner(System.in).nextLine());
         
         System.out.println("Preço: ");
-        televisao.setPreço(new Scanner(System.in).nextDouble());
+        televisao.setPreco(new Scanner(System.in).nextDouble());
         
         System.out.println("Quantas polegadas: ");
         televisao.setPolegadas(new Scanner(System.in).nextDouble());

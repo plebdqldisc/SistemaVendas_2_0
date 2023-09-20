@@ -35,7 +35,7 @@ public class MenuEscolhaCategoria extends javax.swing.JFrame {
 
         jButton1.setText("jButton1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel1.setText("Selecione a categoria que deseja cadastrar:");
@@ -49,6 +49,11 @@ public class MenuEscolhaCategoria extends javax.swing.JFrame {
         });
 
         btnOk.setText("Ok");
+        btnOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOkActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,17 +82,27 @@ public class MenuEscolhaCategoria extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {
-         //switch(cbCategorias.getSelectedIndex())
-             
-             JOptionPane.showMessageDialog(null, cbCategorias.getSelectedIndex());
-    }
-    
+
     
     
     private void cbCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCategoriasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbCategoriasActionPerformed
+
+    private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOkActionPerformed
+        switch(cbCategorias.getSelectedIndex()){
+             case 0:
+                 
+                 CadastroComputador cadastroComputador = new CadastroComputador();
+                 cadastroComputador.setTitle("Cadastro Computador");
+                 cadastroComputador.setLocationRelativeTo(null);
+                 cadastroComputador.setVisible(true);
+                 break;
+             case 1:
+                 
+                 
+         }
+    }//GEN-LAST:event_btnOkActionPerformed
 
     /**
      * @param args the command line arguments

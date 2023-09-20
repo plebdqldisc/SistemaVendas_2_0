@@ -18,7 +18,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public MenuPrincipal() {
         initComponents();
         
-        setExtendedState(MAXIMIZED_BOTH);
+        //setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -36,8 +36,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnListar = new javax.swing.JButton();
         btnVender = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Menu Principal");
+        setAlwaysOnTop(true);
 
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -98,9 +99,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        
         MenuEscolhaCategoria menuEscolhaCategoria = new MenuEscolhaCategoria();
         
-        //menuEscolhaCategoria.setTitle("Categoria");
+        menuEscolhaCategoria.setTitle("Categoria");
         menuEscolhaCategoria.setLocationRelativeTo(null);
         menuEscolhaCategoria.setVisible(true);
     }//GEN-LAST:event_btnCadastrarActionPerformed
