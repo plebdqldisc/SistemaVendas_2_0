@@ -57,6 +57,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnRemover.setText("Remover");
 
         btnListar.setText("Listar");
+        btnListar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListarActionPerformed(evt);
+            }
+        });
 
         btnVender.setText("Vender");
 
@@ -106,6 +111,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         menuEscolhaCategoria.setLocationRelativeTo(null);
         menuEscolhaCategoria.setVisible(true);
     }//GEN-LAST:event_btnCadastrarActionPerformed
+
+    private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
+        Listagem listagem = new Listagem();
+        listagem.setLocationRelativeTo(null);
+        listagem.setVisible(true);
+    }//GEN-LAST:event_btnListarActionPerformed
 
     /**
      * @param args the command line arguments
